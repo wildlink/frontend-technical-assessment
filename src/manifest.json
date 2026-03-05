@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ShopSmart",
+  "version": "1.0.0",
+  "description": "Earn cashback while you shop.",
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [],
+  "host_permissions": ["<all_urls>"]
+}

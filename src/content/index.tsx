@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { CashbackBadge } from './components/CashbackBadge';
+import { App } from './App';
+import { asyncTask } from './asyncTask';
 
 function mount() {
   const host = document.createElement('div');
@@ -12,7 +13,8 @@ function mount() {
   shadow.appendChild(mountPoint);
 
   const root = ReactDOM.createRoot(mountPoint);
-  root.render(<CashbackBadge rate={null} />);
+  root.render(<App />);
 }
 
+asyncTask();
 mount();
